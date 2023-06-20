@@ -51,30 +51,45 @@ func Request(method string, url string, data string) ([]byte, error) {
 
 // Get: HTTP Get method
 func Get(url string) ([]byte, error) {
-	return Request("GET", url, "")
+	return Request(http.MethodGet, url, "")
+}
+
+// Head: HTTP Head method
+func Head(url string, data string) ([]byte, error) {
+	return Request(http.MethodHead, url, "")
 }
 
 // Post: HTTP Post method
 func Post(url string, data string) ([]byte, error) {
-	return Request("POST", url, data)
+	return Request(http.MethodPost, url, data)
 }
 
 // Put: HTTP Put method
 func Put(url string, data string) ([]byte, error) {
-	return Request("POST", url, data)
+	return Request(http.MethodPut, url, data)
 }
 
 // Patch: HTTP Patch method
 func Patch(url string, data string) ([]byte, error) {
-	return Request("PATCH", url, data)
+	return Request(http.MethodPatch, url, data)
 }
 
 // Delete: HTTP Delete method
 func Delete(url string, data string) ([]byte, error) {
-	return Request("DELETE", url, data)
+	return Request(http.MethodDelete, url, data)
 }
 
-// ToString: From byte to string
-func ToString(body []byte) string {
-	return string(body)
+// Connect: HTTP Connect method
+func Connect(url string, data string) ([]byte, error) {
+	return Request(http.MethodConnect, url, data)
+}
+
+// Options: HTTP Options method
+func Options(url string, data string) ([]byte, error) {
+	return Request(http.MethodOptions, url, data)
+}
+
+// Trace: HTTP Trace method
+func Trace(url string, data string) ([]byte, error) {
+	return Request(http.MethodTrace, url, data)
 }
