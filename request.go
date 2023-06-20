@@ -55,7 +55,7 @@ func Get(url string) ([]byte, error) {
 }
 
 // Head: HTTP Head method
-func Head(url string, data string) ([]byte, error) {
+func Head(url string) ([]byte, error) {
 	return Request(http.MethodHead, url, "")
 }
 
