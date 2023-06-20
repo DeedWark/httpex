@@ -20,3 +20,8 @@ func FmtJSON(body []byte) (string, error) {
 func FmtHTML(body []byte) string {
 	return gohtml.Format(string(body))
 }
+
+// ToString: From byte to string
+func ToString(body []byte) string {
+	return string(body)
+}
