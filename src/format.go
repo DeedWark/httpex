@@ -1,3 +1,8 @@
+/* Author: DeedWark <github.com/DeedWark>
+ * @2023
+ * v1
+ */
+
 package httpex
 
 import (
