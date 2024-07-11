@@ -54,7 +54,7 @@ func serve() {
         Address:   ":8080",
         WebPage:   myFunc,
         LogMethod: os.Stderr,
-        logFormat: "CombinedLoggingHandler",
+        LogFormat: "CombinedLoggingHandler",
     }
     opt.Serve()
 }
